@@ -3,6 +3,9 @@ extends ../layout
 block content
 
   .mainSpace
+    p
+    p
+    p
     h1= article.title
     form(id="articleEditForm", method="post", action="/zine/showArticles")
       p Title:
@@ -20,3 +23,12 @@ block content
       textarea(name="articleBodyTextArea")=article.body
       br
       input(type="submit", id="newArticleSubmitButton", value="Edit Article!")
+      br
+      br
+      br
+      br
+      input.delete(type="submit", name="deleteButton", value="DELETE ARTICLE") 
+      p
+      p
+      p
+      

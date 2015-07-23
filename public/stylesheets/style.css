@@ -74,6 +74,10 @@ img.articleImage {
   margin-right: auto;
 }
 
+input.delete {
+  font-size: 50px;
+}
+
 p.articleText {
   width: 50%
 }
