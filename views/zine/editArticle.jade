@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+
+  h1= article.title
+  
+  form(id="articleEditForm", method="post", action="/zine/showArticles")
+    p Title:
+    input(type="text", name="articleTitleInput", value=article.title)
+    br
+    p Background URL:
+    input(type="text", name="backgroundImgUrlInput", value=article.backgroundURL)
+    br
+    input(type="checkbox", name="backgroundDarkColorsBox") 
+    | Background Image Has Dark Colors
+    p Excerpt:
+    textarea(name="articleExcerptTextArea")=article.excerpt
+    br
+    p Body:
+    textarea(name="articleBodyTextArea")=article.body
+    br
+    input(type="submit", id="newArticleSubmitButton", value="Edit Article!")

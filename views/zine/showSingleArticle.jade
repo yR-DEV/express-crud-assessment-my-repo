@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+
+  h1= article.title
+  
+  p= article.excerpt
+  
+  p= article.body
+  
+  br
+  a(href="/zine/" + article._id + "/editArticle") Edit the article!

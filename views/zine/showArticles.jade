@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+
+  h1 Show Articles
+  a(href="/zine/newArticle") Add a New Article!
+  br
+  br
+  br
+  .mainSpace
+    for article in allArticles
+      a(href='/zine/' + article._id)= article.title
+        img.articleImage(src=article.backgroundURL)
+      p.articleText= article.body
+      br
+      br

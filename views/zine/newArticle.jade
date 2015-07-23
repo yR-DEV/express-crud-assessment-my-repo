@@ -1,0 +1,76 @@
+extends ../layout
+
+block content
+  p 
+  br
+  br
+  //- .mainSpace
+  //-   table
+  //-   h2.h2Border New Article
+  //-   form.newArticleForm(id="newArticleForm", method="post", action="/zine/showArticles")
+  //-     p 
+  //-     | Title:     
+  //-     input(type="text", name="articleTitleInput")
+  //-     br
+  //-     p 
+  //-     | Background URL:     
+  //-     input(type="text", name="backgroundImgUrlInput")
+  //-     br
+  //-     input(type="checkbox", name="backgroundDarkColorsBox") 
+  //-     | Background Image Has Dark Colors
+  //-     p 
+  //-     | Excerpt:     
+  //-     textarea(name="articleExcerptTextArea", cols="100", rows="15")
+  //-     br
+  //-     p 
+  //-     | Body:     
+  //-     textarea(name="articleBodyTextArea", cols="100", rows="15")
+  //-     br
+  //-     input(type="submit", id="newArticleSubmitButton", value="Add Article!")
+  form.newArticleForm(id="newArticleForm", method="post", action="/zine/showArticles")    
+    table.mainSpace
+      th.header New Article
+        td.header 
+      tr
+        td
+          p
+          | Title:
+        td.input  
+          input(type="text", name="articleTitleInput", size="100")
+          br
+      tr
+        td
+          p
+          | Background URL:    
+        td.input
+          input(type="text", name="backgroundImgUrlInput", id="backgroundImgUrlInput", size="100")
+          br
+      tr
+        td
+          p
+          | Does Background Image Have Dark Colors?
+        td.input
+          input(type="checkbox", name="backgroundDarkColorsBox")
+          br
+      tr
+        td      
+          p
+          | Excerpt:
+        td.textarea  
+          textarea(name="articleExcerptTextArea", cols="100", rows="15")
+          br
+      tr
+        td
+          p
+          | Body:
+        td.textarea
+          textarea(name="articleBodyTextArea", cols="100", rows="15")
+          br 
+      tr
+        td
+          br
+          span
+            input.newArticleSubmit(type="submit", id="newArticleSubmitButton", value="Add Article!")    
+          br
+          br
+          p      
