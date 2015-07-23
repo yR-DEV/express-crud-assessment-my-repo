@@ -38,7 +38,7 @@ if(theCheckBox === 'on') {
 
 router.get('/zine/showSingleArticle', function(req, res, next) {
   res.render('zine/showSingleArticle');
-})
+});
 
 router.get('/zine/:id', function(req, res, next) {
   articleCollection.findOne({_id: req.params.id}, function(err, theArticle) {
